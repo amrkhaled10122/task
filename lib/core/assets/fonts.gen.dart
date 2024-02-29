@@ -10,9 +10,6 @@
 class FontFamily {
   FontFamily._();
 
-  /// Font family: SFArabic
-  static const String sFArabic = 'SFArabic';
-
-  /// Font family: SFCompact
-  static const String sFCompact = 'SFCompact';
+  /// Font family: AlexandriaFLF
+  static const String alexandriaFLF = 'AlexandriaFLF';
 }

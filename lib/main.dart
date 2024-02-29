@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:task/core/bindings/initial_binding.dart';
+import 'core/bindings/initial_binding.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'core/utils/theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,13 +28,16 @@ class MyApp extends StatelessWidget {
               localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: _getSupportedLocal(),
               debugShowCheckedModeBanner: false,
+              theme: AppTheme.lightTheme(),
+              themeMode: ThemeMode.system,
+              darkTheme: AppTheme.darkTheme(),
             ));
   }
 
   List<Locale> _getSupportedLocal() {
     return [
       const Locale('en', ''),
-      const Locale('bn', ''),
+      const Locale('ar', ''),
     ];
   }
 }

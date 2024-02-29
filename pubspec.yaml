@@ -73,25 +73,18 @@ flutter:
   uses-material-design: true
   generate: true
 
-  # assets:
-  #   - assets/icons/
-  #   - assets/fonts/
-  #   - assets/fonts/sf/
-  #   - assets/videos/
-  #   - assets/animation/
-  #   - assets/lang/
+  assets:
+    - assets/icons/
+    - assets/fonts/  
+    - assets/animation/
+   
 
-  fonts:
-    - family: SFArabic
+  fonts:   
+    - family: AlexandriaFLF
       fonts:
-        - asset: assets/fonts/sf/SF-Arabic.ttf
-    - family: SFCompact
-      fonts:
-        - asset: assets/fonts/sf/SF-Compact-Text-Thin.ttf
+        - asset: assets/fonts/AlexandriaFLF-Italic.ttf
           weight: 300
-        - asset: assets/fonts/sf/SF-Compact-Text-Regular.ttf
-          weight: 400
-        - asset: assets/fonts/sf/SF-Compact-Text-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/sf/SF-Compact-Text-Bold.ttf
+        - asset: assets/fonts/AlexandriaFLF.ttf
+          weight: 400      
+        - asset: assets/fonts/AlexandriaFLF-Bold.ttf
           weight: 700

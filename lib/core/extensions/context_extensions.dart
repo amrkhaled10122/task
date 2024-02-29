@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 /// [ContextExtensions] is a class that contains all context extensions.
 extension ContextExtensions on BuildContext {
@@ -25,4 +26,6 @@ extension ContextExtensions on BuildContext {
 
   /// [hideKeyBoard] is a Void to close opening keyboard when the user click on any empty space in the screen
   void get hideKeyBoard => FocusScope.of(this).requestFocus(FocusNode());
+
+  AppLocalizations get localization => AppLocalizations.of(this)!;
 }

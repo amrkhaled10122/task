@@ -115,29 +115,4 @@ extension ColorExtension on ColorScheme {
         const Color(0xffFFA74B).withOpacity(0.1),
         const Color(0xff66C08F).withOpacity(0.1),
       ];
-
-  /// Stepper Color Extension
-  Color? getStepperLineColor(int currentStep, int index) {
-    final color = currentStep > index + 1 ? Colors.black : Colors.grey[200];
-    return color;
-  }
-
-  Color getStepperBorderColor(
-    int currentStep,
-    int index,
-    Color stepCompleteColor,
-    Color currentStepColor,
-    Color inactiveColor,
-  ) {
-    Color color;
-    if (index + 1 < currentStep) {
-      color = stepCompleteColor;
-    } else if (index + 1 == currentStep) {
-      color = currentStepColor;
-    } else {
-      color = inactiveColor;
-    }
-
-    return color;
-  }
 }
