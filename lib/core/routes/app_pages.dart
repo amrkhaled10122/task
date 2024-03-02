@@ -1,55 +1,38 @@
-// import 'package:get/get.dart';
+import 'package:get/get.dart';
+import '../../modules/edit_profile/view/edit_profile_screen.dart';
+import '../../modules/home/view/home_screen.dart';
+import '../../modules/login/view/login_screen.dart';
+import '../../modules/register/view/register_screen.dart';
+import '../../modules/welcome/view/welcome_screen.dart';
 
-// import '/app/modules/favorite/bindings/favorite_binding.dart';
-// import '/app/modules/favorite/views/favorite_view.dart';
-// import '/app/modules/home/bindings/home_binding.dart';
-// import '/app/modules/home/views/home_view.dart';
-// import '/app/modules/main/bindings/main_binding.dart';
-// import '/app/modules/main/views/main_view.dart';
-// import '/app/modules/other/bindings/other_binding.dart';
-// import '/app/modules/other/views/other_view.dart';
-// import '/app/modules/project_details/bindings/project_details_binding.dart';
-// import '/app/modules/project_details/views/project_details_view.dart';
-// import '/app/modules/settings/bindings/settings_binding.dart';
-// import '/app/modules/settings/views/settings_view.dart';
+part 'app_routes.dart';
 
-// part 'app_routes.dart';
+class AppPages {
+  AppPages._();
 
-// class AppPages {
-//   AppPages._();
+  static const inital = Routes.welcome;
 
-//   static const INITIAL = Routes.MAIN;
-
-//   static final routes = [
-//     GetPage(
-//       name: _Paths.MAIN,
-//       page: () => MainView(),
-//       binding: MainBinding(),
-//     ),
-//     GetPage(
-//       name: _Paths.HOME,
-//       page: () => HomeView(),
-//       binding: HomeBinding(),
-//     ),
-//     GetPage(
-//       name: _Paths.FAVORITE,
-//       page: () => FavoriteView(),
-//       binding: FavoriteBinding(),
-//     ),
-//     GetPage(
-//       name: _Paths.SETTINGS,
-//       page: () => SettingsView(),
-//       binding: SettingsBinding(),
-//     ),
-//     GetPage(
-//       name: _Paths.OTHER,
-//       page: () => OtherView(),
-//       binding: OtherBinding(),
-//     ),
-//     GetPage(
-//       name: _Paths.PROJECT_DETAILS,
-//       page: () => ProjectDetailsView(),
-//       binding: ProjectDetailsBinding(),
-//     ),
-//   ];
-// }
+  static final routes = [
+    GetPage(
+      name: inital,
+      page: () => const WelcomeScreen(),
+      // binding: MainBinding(),
+    ),
+    GetPage(
+      name: _Paths.login,
+      page: () => const LoginScreen(),
+    ),
+    GetPage(
+      name: _Paths.register,
+      page: () => const RegisterScreen(),
+    ),
+    GetPage(
+      name: _Paths.home,
+      page: () => const HomeScreen(),
+    ),
+    GetPage(
+      name: _Paths.profile,
+      page: () => const EditProfileScreen(),
+    ),
+  ];
+}

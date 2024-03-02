@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class FormRegister {
-  final GlobalKey<FormState> key = GlobalKey<FormState>();
+  static final GlobalKey<FormState> key = GlobalKey<FormState>();
 
-  final TextEditingController phoneController = TextEditingController();
-  final TextEditingController fullNameController = TextEditingController();
+  static final TextEditingController phoneController = TextEditingController();
+  static final TextEditingController fullNameController = TextEditingController();
+  static final TextEditingController emailController = TextEditingController();
+  static final TextEditingController passwordController = TextEditingController();
+  static final TextEditingController confirmPasswordController = TextEditingController();
 
-  FocusNode phoneFocus = FocusNode();
-  FocusNode passwordFocus = FocusNode();
-
-  void dispose() {
+  static void dispose() {
     phoneController.clear();
     fullNameController.dispose();
-
-    phoneFocus.dispose();
-    passwordFocus.dispose();
+    emailController.clear();
+    passwordController.dispose();
+    confirmPasswordController.dispose();
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 // [WText]is Custom widget for displaying text with customizable properties
 class WText extends StatelessWidget {
@@ -29,7 +30,7 @@ class WText extends StatelessWidget {
     return Text(data,
         key: key,
         overflow: overflow,
-        style: style,
+        style: style ?? context.textTheme.displaySmall,
         maxLines: maxLines,
         textAlign: textAlign,
         softWrap: softWrap,

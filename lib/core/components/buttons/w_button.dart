@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../extensions/color_extension.dart';
 import '../../utils/enums/enums.dart';
 
 import '../../extensions/context_extensions.dart';
@@ -80,7 +81,7 @@ class _WButtonState extends State<WButton> {
                     }
                   },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.transparent,
+              backgroundColor: widget.color,
               elevation: 0,
             ),
             child: Container(
@@ -126,20 +127,21 @@ class _WButtonState extends State<WButton> {
   TextStyle? getTextStyle() {
     return widget.isWhiteButton == null
         ? context.theme.textTheme.headlineSmall?.copyWith(
-            // color: widget.customTextColor ?? context.theme.colorScheme.whiteColor,
+            color: widget.customTextColor ?? context.theme.colorScheme.whiteColor,
             fontSize: widget.fontSize ?? 18.sp,
             fontWeight: FontWeight.bold,
             height: 1,
           )
         : context.theme.textTheme.bodyMedium?.copyWith(
-            // color: widget.customTextColor ?? context.theme.colorScheme.blackColor,
+            color: widget.customTextColor ?? context.theme.colorScheme.blackColor,
             fontSize: widget.fontSize ?? 18.sp,
+            fontWeight: FontWeight.bold,
             height: 1,
           );
   }
 
   BoxDecoration getDecoration() {
-    final Color color = (widget.disabled ?? false) ? Colors.black12 : Colors.black12;
+    final Color color = (widget.disabled ?? false) ? Colors.white : Colors.black12;
 
     return widget.isWhiteButton == null
         ? BoxDecoration(
@@ -149,8 +151,8 @@ class _WButtonState extends State<WButton> {
         : BoxDecoration(
             border: Border.fromBorderSide(
               BorderSide(
-                  // color: widget.customBorderColor ?? context.theme.colorScheme.blackColor,
-                  ),
+                color: widget.customBorderColor ?? context.theme.colorScheme.blackColor,
+              ),
             ),
             borderRadius: BorderRadius.circular(widget.radius ?? 10.r),
           );

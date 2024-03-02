@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../text/w_text.dart';
 import '../../../extensions/app_size_extension.dart';
 import '../../../extensions/color_extension.dart';
 import '../../../extensions/context_extensions.dart';
+import '../../text/w_text.dart';
 
 // [WSharedInput ]is Custom widget for a  input field
 class WSharedInput extends StatelessWidget {
@@ -91,6 +91,7 @@ class WSharedInput extends StatelessWidget {
         TextFormField(
           autovalidateMode: AutovalidateMode.onUserInteraction,
           textAlignVertical: textAlignVertical ?? TextAlignVertical.center,
+          textAlign: TextAlign.center,
           autofocus: autofocus,
           readOnly: readOnly,
           expands: expands,

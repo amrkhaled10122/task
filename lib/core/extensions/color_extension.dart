@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 extension ColorExtension on ColorScheme {
-  Color get primaryColor => const Color(0xffE57A7A);
+  Color get primaryColor => Colors.purple;
   Color get policyColor => const Color(0xffFF5601);
   Color get secondaryColor => const Color(0xff3492FF);
   Color get secondaryColorLight => const Color(0xffd6e9ff);

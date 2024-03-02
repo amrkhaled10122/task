@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
-import '../data/local/preference/preference_manager.dart';
-import '../data/local/preference/preference_manager_impl.dart';
+
+import '../services/preference/preference_manager.dart';
+import '../services/preference/preference_manager_impl.dart';
 
 class LocalSourceBindings implements Bindings {
   @override

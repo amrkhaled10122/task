@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'w_shared_input.dart';
+
 import '../../../extensions/color_extension.dart';
 import '../../../extensions/context_extensions.dart';
+import 'w_shared_input.dart';
 
 // [WPasswordInputField ]is Custom widget for a password input field
 class WPasswordInputField extends StatefulWidget {
@@ -55,8 +56,9 @@ class _WPasswordInputFieldState extends State<WPasswordInputField> {
       textInputAction: widget.textInputAction,
       onFieldSubmitted: widget.onFieldSubmitted,
       contentPadding: widget.contentPadding,
-      suffixIcon: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+      hint: widget.hintText,
+      suffix: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5),
         child: GestureDetector(
           onTap: () {
             setState(() {

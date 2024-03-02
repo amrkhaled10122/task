@@ -4,19 +4,17 @@ part of 'app_pages.dart';
 abstract class Routes {
   Routes._();
 
-  static const MAIN = _Paths.MAIN;
-  static const HOME = _Paths.HOME;
-  static const FAVORITE = _Paths.FAVORITE;
-  static const SETTINGS = _Paths.SETTINGS;
-  static const OTHER = _Paths.OTHER;
-  static const PROJECT_DETAILS = _Paths.PROJECT_DETAILS;
+  static const welcome = _Paths.welcome;
+  static const home = _Paths.home;
+  static const profile = _Paths.profile;
+  static const login = _Paths.login;
+  static const register = _Paths.register;
 }
 
 abstract class _Paths {
-  static const MAIN = '/main';
-  static const HOME = '/home';
-  static const FAVORITE = '/favorite';
-  static const SETTINGS = '/settings';
-  static const OTHER = '/other';
-  static const PROJECT_DETAILS = '/project-details';
+  static const welcome = '/welcome';
+  static const home = '/home';
+  static const profile = '/profile';
+  static const login = '/login';
+  static const register = '/register';
 }

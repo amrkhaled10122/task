@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../extensions/color_extension.dart';
 import '../../../extensions/context_extensions.dart';
 import '../../text/w_text.dart';
@@ -28,7 +28,6 @@ class WSharedAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
-      backgroundColor: backgroundColor ?? context.theme.colorScheme.whiteColor,
       actions: actions,
       leading: leading ??
           (removeBack
@@ -53,7 +52,7 @@ class WSharedAppBar extends StatelessWidget {
         style: context.theme.textTheme.headlineSmall?.copyWith(
           fontWeight: FontWeight.bold,
           fontSize: 18.sp,
-          color: context.theme.colorScheme.blackColor,
+          color: context.theme.colorScheme.whiteColor,
           height: 2.0,
         ),
       ),

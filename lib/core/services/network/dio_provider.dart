@@ -3,11 +3,9 @@ import 'package:dio/dio.dart';
 import 'request_headers.dart';
 
 class DioProvider {
-  static final String baseUrl = "";
+  static const String baseUrl = "http://testapi.alifouad91.comhttp://testapi.alifouad91.com";
 
   static Dio? _instance;
-
-  static const int _maxLineWidth = 90;
 
   static final BaseOptions _options = BaseOptions(
     baseUrl: baseUrl,
