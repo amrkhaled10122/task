@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+
 import '../../../core/components/buttons/w_button.dart';
 import '../../../core/components/inputs/form_fields/w_password_input_field.dart';
 import '../../../core/components/inputs/form_fields/w_shared_input.dart';
@@ -51,7 +52,7 @@ class RegisterScreen extends StatelessWidget {
             WPasswordInputField(
               textEditingController: FormRegister.confirmPasswordController,
               hintText: "Confirm Password",
-              validator: (value) => GetUtils.isNull(value!) &&
+              validator: (value) => !GetUtils.isNull(value!) &&
                       (FormRegister.confirmPasswordController.text == FormRegister.passwordController.text)
                   ? null
                   : "Required",

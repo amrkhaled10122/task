@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'request_headers.dart';
 
 class DioProvider {
-  static const String baseUrl = "http://testapi.alifouad91.comhttp://testapi.alifouad91.com";
+  static const String baseUrl = "http://testapi.alifouad91.com";
 
   static Dio? _instance;
 

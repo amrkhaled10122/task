@@ -9,7 +9,7 @@ class WLoader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Lottie.asset('assets/animation/task_loader.json', width: size ?? 120.w, height: size ?? 120.h),
+      child: Lottie.asset('assets/animation/zeyada_loader.json', width: size ?? 120.w, height: size ?? 120.h),
     );
   }
 }

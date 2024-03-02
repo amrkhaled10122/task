@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:task/modules/register/binding/register_binding.dart';
 import '../../modules/edit_profile/view/edit_profile_screen.dart';
 import '../../modules/home/view/home_screen.dart';
 import '../../modules/login/view/login_screen.dart';
@@ -22,10 +23,7 @@ class AppPages {
       name: _Paths.login,
       page: () => const LoginScreen(),
     ),
-    GetPage(
-      name: _Paths.register,
-      page: () => const RegisterScreen(),
-    ),
+    GetPage(name: _Paths.register, page: () => const RegisterScreen(), binding: RegisterBinding()),
     GetPage(
       name: _Paths.home,
       page: () => const HomeScreen(),
